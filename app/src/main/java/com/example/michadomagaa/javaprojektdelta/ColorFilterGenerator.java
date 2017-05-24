@@ -1,6 +1,8 @@
 package com.example.michadomagaa.javaprojektdelta;
 
+import android.graphics.ColorFilter;
 import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 
 /**
  * Created by macfr on 24.05.2017.
@@ -43,10 +45,90 @@ public class ColorFilterGenerator {
         cm.postConcat(new ColorMatrix(mat));
     }
 
+    public static void adjustBrightness(ColorMatrix cm, float value) {
+        value = cleanValue(value,100);
+        if (value == 0) {
+            return;
+        }
+
+        float[] mat = new float[]
+                {
+                        1,0,0,0,value,
+                        0,1,0,0,value,
+                        0,0,1,0,value,
+                        0,0,0,1,0,
+                        0,0,0,0,1
+                };
+        cm.postConcat(new ColorMatrix(mat));
+    }
+
+    public static void adjustContrast(ColorMatrix cm, int value) {
+        value = (int)cleanValue(value,100);
+        if (value == 0) {
+            return;
+        }
+        float x;
+        if (value < 0) {
+            x = 127 + (float) value / 100*127;
+        } else {
+            x = value % 1;
+            if (x == 0) {
+                x = (float)DELTA_INDEX[value];
+            } else {
+                //x = DELTA_INDEX[(p_val<<0)]; // this is how the IDE does it.
+                x = (float)DELTA_INDEX[(value<<0)]*(1-x) + (float)DELTA_INDEX[(value<<0)+1] * x; // use linear interpolation for more granularity.
+            }
+            x = x*127+127;
+        }
+
+        float[] mat = new float[]
+                {
+                        x/127,0,0,0, 0.5f*(127-x),
+                        0,x/127,0,0, 0.5f*(127-x),
+                        0,0,x/127,0, 0.5f*(127-x),
+                        0,0,0,1,0,
+                        0,0,0,0,1
+                };
+        cm.postConcat(new ColorMatrix(mat));
+
+    }
+
+    public static void adjustSaturation(ColorMatrix cm, float value) {
+        value = cleanValue(value,100);
+        if (value == 0) {
+            return;
+        }
+
+        float x = 1+((value > 0) ? 3 * value / 100 : value / 100);
+        float lumR = 0.3086f;
+        float lumG = 0.6094f;
+        float lumB = 0.0820f;
+
+        float[] mat = new float[]
+                {
+                        lumR*(1-x)+x,lumG*(1-x),lumB*(1-x),0,0,
+                        lumR*(1-x),lumG*(1-x)+x,lumB*(1-x),0,0,
+                        lumR*(1-x),lumG*(1-x),lumB*(1-x)+x,0,0,
+                        0,0,0,1,0,
+                        0,0,0,0,1
+                };
+        cm.postConcat(new ColorMatrix(mat));
+    }
+
 
 
     protected static float cleanValue(float p_val, float p_limit)
     {
         return Math.min(p_limit, Math.max(-p_limit, p_val));
+    }
+
+    public static ColorFilter adjustColor(int brightness, int contrast, int saturation, int hue){
+        ColorMatrix cm = new ColorMatrix();
+        adjustHue(cm, hue);
+        adjustContrast(cm, contrast);
+        adjustBrightness(cm, brightness);
+        adjustSaturation(cm, saturation);
+
+        return new ColorMatrixColorFilter(cm);
     }
 }
