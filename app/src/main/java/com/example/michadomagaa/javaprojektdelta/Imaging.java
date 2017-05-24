@@ -11,7 +11,7 @@ import java.io.File;
 
 public class Imaging {
 
-    public Imaging(){};
+    public Imaging(){}
 
     public static Bitmap decodeImage(String path){
         Bitmap bitmap;

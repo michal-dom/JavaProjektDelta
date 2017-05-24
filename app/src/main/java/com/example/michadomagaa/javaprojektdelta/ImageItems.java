@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 
 public class ImageItems {
 
-
         private Bitmap image;
         private String title;
         private long size;
