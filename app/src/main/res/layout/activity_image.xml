@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.example.michadomagaa.javaprojektdelta.ImageActivity">
+
+    <ImageView
+        android:id="@+id/image_image"
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        android:layout_alignParentBottom="true"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#88000000"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"></RelativeLayout>
+
+    <TextView
+        android:id="@+id/name_view"
+        android:text="nazwa.error"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="471dp"
+        android:layout_alignParentLeft="true"
+        android:background="#88000000"
+        tools:layout_editor_absoluteY="32dp"
+        tools:layout_editor_absoluteX="0dp"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:background="#88000000"
+        tools:layout_editor_absoluteY="48dp"
+        tools:layout_editor_absoluteX="0dp"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#88000000"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"></RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/edit_rl"
+        android:layout_alignParentRight="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="E"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="EDYCJA"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/hue_rl"
+        android:layout_alignParentRight="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="O"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="ODCIEŃ"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/contrast_rl"
+        android:layout_alignParentRight="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="K"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="KONTRAST"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/saturation_rl"
+        android:layout_alignParentRight="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="N"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="NASYCENIE"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/brightness_rl"
+        android:layout_alignParentRight="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="J"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="JASNOŚĆ"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/crop_rl"
+        android:layout_alignParentLeft="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="P"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="PRZYTNIJ"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/info_rl"
+        android:layout_alignParentLeft="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="I"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="INFORMACJE"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/rotate_rl"
+        android:layout_alignParentLeft="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="O"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="OBROT"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/share_rl"
+        android:layout_alignParentLeft="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="W"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="WYŚLIJ"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MyRelativeViewStyle"
+        android:id="@+id/set_rl"
+        android:layout_alignParentLeft="true"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            style="@style/MyTextViewStyle1"
+            android:text="U"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            style="@style/MyTextViewStyle2"
+            android:text="USTAW"
+            android:layout_marginTop="45dp"
+            android:textSize="8dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <SeekBar
+        style="@style/MySeekBar"
+        android:id="@+id/hue_seekbar"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <SeekBar
+        style="@style/MySeekBar"
+        android:id="@+id/contrast_seekbar"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+    <SeekBar
+        style="@style/MySeekBar"
+        android:id="@+id/saturation_seekbar"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+    <SeekBar
+        style="@style/MySeekBar"
+        android:id="@+id/brightness_seekbar"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:text="ZAPISZ"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:text="USUŃ"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+</RelativeLayout>
