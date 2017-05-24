@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_gallery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.example.michadomagaa.javaprojektbeta.GalleryActivity">
+
+
+    <ImageView
+        android:id="@+id/gallery_main_img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/forest"
+        android:scaleType="center"/>
+    <TextView
+        android:text="U"
+        android:id="@+id/gallery_main_name"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#eee"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+    <TextView
+        android:text="U"
+        android:id="@+id/gallery_main_size"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#eee"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="170dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#000"
+        android:layout_marginTop="200dp">
+
+        <RelativeLayout
+            style="@style/MyRelativeViewStyle"
+            android:id="@+id/gallery_edit"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp">
+            <TextView
+                style="@style/MyTextViewStyle1"
+                android:text="E"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                style="@style/MyTextViewStyle2"
+                android:text="EDYTUJ"
+                android:layout_marginTop="45dp"
+                android:textSize="8dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/MyRelativeViewStyle"
+            android:id="@+id/gallery_delate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+            <TextView
+                style="@style/MyTextViewStyle1"
+                android:text="U"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                style="@style/MyTextViewStyle2"
+                android:text="USUŃ"
+                android:layout_marginTop="45dp"
+                android:textSize="8dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/MyRelativeViewStyle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp">
+            <TextView
+                style="@style/MyTextViewStyle1"
+                android:text="A"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                style="@style/MyTextViewStyle2"
+                android:text="USTAW"
+                android:layout_marginTop="45dp"
+                android:textSize="8dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/grid_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp"
+        android:focusable="true"
+        android:clickable="true"/>
+
+</RelativeLayout>
