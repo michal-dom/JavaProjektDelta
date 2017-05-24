@@ -1,6 +1,8 @@
+
 /**
  * Created by Marcin on 24.05.2017.
  */
+
 
 package com.example.michadomagaa.javaprojektdelta;
 import android.graphics.Bitmap;
@@ -39,3 +41,4 @@ public class ImageItems {
             return size;
         }
 }
+
