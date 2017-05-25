@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(
                         MainActivity.this,
-                        GalleryActivity.class);
+                        CameraActivity.class);
                 intent.putExtra("root", "root");
                 startActivity(intent);
             }

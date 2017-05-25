@@ -23,7 +23,7 @@ public class Imaging {
 
         File file = new File(path);
         bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
-        return bitmap;//(file) ;
+        return bitmap;//decodeFile(file) ;
     }
     private static Bitmap decodeFile(File f) {
         try {
@@ -33,7 +33,7 @@ public class Imaging {
             BitmapFactory.decodeStream(new FileInputStream(f), null, o);
 
             // The new size we want to scale to
-            final int REQUIRED_SIZE=70;
+            final int REQUIRED_SIZE=100;
 
             // Find the correct scale value. It should be the power of 2.
             int scale = 1;

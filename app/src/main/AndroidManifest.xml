@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".GalleryActivity" />
-        <activity android:name=".CameraAvtivity"></activity>
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".ImageActivity"></activity>
     </application>
 
 </manifest>

@@ -1,21 +1,17 @@
 package com.example.michadomagaa.javaprojektdelta;
 
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ImageActivity extends AppCompatActivity {
 
@@ -46,9 +42,7 @@ public class ImageActivity extends AppCompatActivity {
 
         buttonInit();
         seekBarInit();
-
     }
-
     private void buttonInit(){
         brightness_bt = (RelativeLayout) findViewById(R.id.brightness_rl);
         contrast_bt = (RelativeLayout) findViewById(R.id.contrast_rl);
@@ -177,7 +171,4 @@ public class ImageActivity extends AppCompatActivity {
 
         return bm;
     }
-
-
-
 }
