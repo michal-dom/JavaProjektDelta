@@ -23,7 +23,7 @@ public class Imaging {
 
         File file = new File(path);
         bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
-        return decodeFile(file) ;
+        return bitmap;//(file) ;
     }
     private static Bitmap decodeFile(File f) {
         try {

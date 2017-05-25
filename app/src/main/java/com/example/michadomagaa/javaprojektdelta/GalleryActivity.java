@@ -26,7 +26,7 @@ public class GalleryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
-
+        getData();
         gridView = (GridView) findViewById(R.id.grid_gallery);
         gridViewAdapter = new GridViewAdapter(this, R.layout.gallery_grid_item, getData());
 
