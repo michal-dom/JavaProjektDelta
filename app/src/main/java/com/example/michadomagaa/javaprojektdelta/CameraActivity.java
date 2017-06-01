@@ -185,8 +185,9 @@ public class CameraActivity extends AppCompatActivity {
             int rotation = getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, ORIENTATIONS.get(rotation));
             String time = DateFormat.getDateTimeInstance().format(new Date());
-            File dcimFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath());
-            dcimFile.getPath();
+            //Tworzenie singletonu
+            File dcimFile = DCIMFolder.getInstance();
+
             final File file = new File(dcimFile.getPath()+"/Camera/"+time+".jpeg");
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @Override
