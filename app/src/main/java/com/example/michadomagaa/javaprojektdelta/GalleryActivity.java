@@ -58,7 +58,8 @@ public class GalleryActivity extends AppCompatActivity {
 
     }
     private String getFolderPath(){
-        File dcimFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath());
+        //uzywanie singletonu
+        File dcimFile = DCIMFolder.getInstance();
         return dcimFile.getPath();
     }
 
