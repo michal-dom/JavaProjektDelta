@@ -1,5 +1,6 @@
 package com.example.michadomagaa.javaprojektdelta.com.buttons.decorator;
 
+import android.app.Activity;
 import android.content.Context;
 import android.widget.RelativeLayout;
 
@@ -12,6 +13,6 @@ public interface Item {
     Context getContext();
     RelativeLayout getRelativeLayout();
     String getName();
-
+    Activity getActivity();
 
 }

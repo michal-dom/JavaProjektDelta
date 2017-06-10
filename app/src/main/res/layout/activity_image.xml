@@ -23,7 +23,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#88000000"></RelativeLayout>
 
     <TextView
@@ -34,26 +34,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-thin"
         android:textColor="#fff"
-        android:textSize="20dp" />
+        android:textSize="16dp" />
 
-    <RelativeLayout
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="80dp"
-        android:background="#88000000"></RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="80dp"
-        android:background="#88000000"></RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,207 +46,14 @@
         android:layout_alignParentBottom="true"
         android:background="#88000000"></RelativeLayout>
 
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/edit_rl"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="6dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="E"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="EDYCJA"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
 
-
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/hue_rl"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="140dp"
-        android:layout_marginRight="5dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="O"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="ODCIEŃ"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/contrast_rl"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="220dp"
-        android:layout_marginRight="5dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="K"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="KONTRAST"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/saturation_rl"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="300dp"
-        android:layout_marginRight="3dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="N"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="NASYCENIE"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/brightness_rl"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="380dp"
-        android:layout_marginRight="6dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="J"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="JASNOŚĆ"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/crop_rl"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="6dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="P"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="PRZYTNIJ"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/info_rl"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="140dp"
-        android:layout_marginLeft="6dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="I"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="INFORMACJE"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/rotate_rl"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="6dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="O"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="OBROT"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/share_rl"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="6dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="W"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="WYŚLIJ"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/MyRelativeViewStyle"
-        android:id="@+id/set_rl"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="380dp"
-        android:layout_marginLeft="6dp">
-        <TextView
-            style="@style/MyTextViewStyle1"
-            android:text="U"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            style="@style/MyTextViewStyle2"
-            android:text="USTAW"
-            android:layout_marginTop="45dp"
-            android:textSize="8dp"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
 
     <SeekBar
         style="@style/MySeekBar"
         android:id="@+id/hue_seekbar"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         />
 
     <SeekBar
@@ -269,21 +61,21 @@
         android:id="@+id/contrast_seekbar"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         />
     <SeekBar
         style="@style/MySeekBar"
         android:id="@+id/saturation_seekbar"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         />
     <SeekBar
         style="@style/MySeekBar"
         android:id="@+id/brightness_seekbar"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         />
 
     <TextView
