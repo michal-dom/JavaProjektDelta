@@ -115,7 +115,7 @@ public class FilterModel {
 
 
 
-    protected static float cleanValue(float p_val, float p_limit)
+    public static float cleanValue(float p_val, float p_limit)
     {
         return Math.min(p_limit, Math.max(-p_limit, p_val));
     }

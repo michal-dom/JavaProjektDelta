@@ -1,5 +1,6 @@
 package com.example.michadomagaa.javaprojektdelta;
 
+import android.app.Activity;
 import android.graphics.ImageFormat;
 import android.media.Image;
 import android.os.Environment;
@@ -85,8 +86,9 @@ public class CameraActivity extends AppCompatActivity {
         textureView = (TextureView) findViewById(R.id.texture);
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
-
+        //textureView.getSurfaceTextureListener();
         takePictureButton = (TextView) findViewById(R.id.btn_takepicture);
+
         takePictureButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { takePicture(); }
@@ -345,7 +347,6 @@ public class CameraActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == REQUEST_CAMERA_PERMISSION) {
             if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
-                // close the app
                 Toast.makeText(CameraActivity.this, "Sorry!!!, you can't use this app without granting permission", Toast.LENGTH_LONG).show();
                 finish();
             }
@@ -371,5 +372,6 @@ public class CameraActivity extends AppCompatActivity {
         //wywołanie metody onPause
         super.onPause();
     }
+
 
 }
