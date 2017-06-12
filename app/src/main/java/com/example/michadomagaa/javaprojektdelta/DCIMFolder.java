@@ -15,6 +15,11 @@ public class DCIMFolder extends File {
         super(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath());
     }
 
+    public static boolean foldExist(){
+        File tmpFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)+"");
+        return tmpFile.exists();
+    }
+
     public static DCIMFolder getInstance(){
             if(instance == null)
                 instance = new DCIMFolder();

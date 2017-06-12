@@ -26,6 +26,7 @@ public class GridViewAdapter extends ArrayAdapter<ImageItems> {
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         this.data = data;
+
     }
 
     @Override

@@ -44,7 +44,6 @@ public class ImageActivity extends AppCompatActivity {
         iv = (ImageView) findViewById(R.id.image_image);
         iv.setImageBitmap(bitmap);
         iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
-
         buttonInit();
 
         FilterController controller = new FilterController(this);
